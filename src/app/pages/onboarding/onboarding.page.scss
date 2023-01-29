@@ -1,9 +1,45 @@
+@import "src/stylesheets/_variables.scss";
 
+.about-main-div {
+  background-color: $bg-default-color-one;
+  width: 100%;
+  height: 100vh;
 
-.about-main-div{
-//     width: 428px;
-// height: 478px;
+  .sub-div {
+    background-color: $bg-default-color;
+    border-radius: 20px 20px 0px 0px;
+    position: absolute;
+    width: 100%;
+    padding: 20px 20px;
 
-background: #FFFFFF;
-border-radius: 20px 20px 0px 0px;
+    p {
+      font-family: $font-en-primary;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: $color-black;
+    }
+
+    h1 {
+      font-family: $font-en-primary;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 38px;
+      padding-top: 3px;
+      color: $color-black;
+    }
+
+    .description {
+      font-family: $font-en-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13.5px;
+      line-height: 20px;
+      color: #626262;
+      opacity: 0.6;
+      padding-top: 9px;
+    }
+  }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-splash',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./splash.page.scss'],
 })
 export class SplashPage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  // eslint-disable-next-line @typescript-eslint/member-ordering
+  @HostListener('window:load')
+  onNavigate() {
+    setTimeout(() => {
+      this.router.navigate(['/', 'onboarding']);
+    }, 1000);
   }
-
 }
