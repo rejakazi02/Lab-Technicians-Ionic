@@ -24,6 +24,10 @@ const routes: Routes = [
         path: 'onboarding',
         loadChildren: () => import('./pages/onboarding/onboarding.module').then( m => m.OnboardingPageModule)
       },
+      {
+        path: 'login',
+        loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+      },
     ]
 
    },
@@ -34,6 +38,10 @@ const routes: Routes = [
   {
     path: 'onboarding',
     loadChildren: () => import('./pages/onboarding/onboarding.module').then( m => m.OnboardingPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
 
 
