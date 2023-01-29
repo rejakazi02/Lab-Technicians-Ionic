@@ -1,0 +1,7 @@
+{
+  "name": "Red Groccer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,143 @@
+@import'src/stylesheets/variables';
+/**** blog-card ****/
+
+.blog-card{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px 0 rgb( 0 0 0 / 10%);
+    background-color: #fff;
+}
+.blog-image{
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+
+}
+.blog-image img{
+    transition: all 0.3s linear;
+    border-radius: 8px;
+    transform: scale(1);
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+}
+.blog-card:hover .blog-image img{
+    transform: scale(1.06);
+}
+.blog-body{
+    padding: 15px 15px 0px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.blog-body ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 8px;
+}
+.blog-body ul li{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    color: $text-color;
+    font-family: $font-en-primary;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+.blog-body ul li:last-child{
+    margin: 0px;
+}
+.blog-body ul li i{
+    font-size: 14px;
+    color: $color-primary;
+}
+
+.blog-title{
+    display: block;
+    margin-bottom: 12px;
+}
+.blog-title a{
+    color: $heading-color;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size:18px;
+    line-height: 22px;
+    max-height: 100px;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+.blog-title a:hover{
+    color: $color-primary;
+}
+.blog-des{
+    display: block;
+    margin-bottom: 15px;
+}
+.blog-des p{
+    color: $color-light-gray;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    display: block;
+    max-height: 130px;
+    display:-webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+@media (min-width:470px) and (max-width: 500px){
+    .blog-des p{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .blog-title a{
+        font-size: 17px;
+        line-height: 19px;
+    }
+}
+
+.read-more{
+    display: block;
+}
+.read-more a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 5px;
+    font-family: $font-en-primary;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+    background-color: #df1d41;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    max-width: 100px;
+    width: 100%;
+    position: relative;
+    bottom: -15px;
+    left: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+.read-more a i{
+    font-size: 13px;
+    position: relative;
+    transition: all 0.3s linear;
+    left: 0px;
+}
+.read-more a:hover i{
+    
+    left: 5px;
+}

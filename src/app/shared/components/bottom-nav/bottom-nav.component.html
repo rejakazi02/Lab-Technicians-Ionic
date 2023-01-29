@@ -1,0 +1,26 @@
+<div class="bottom-nav">
+  <div class="container">
+    <div class="bottom-nav-main">
+      <ul>
+        <li [routerLink]="['/home']" routerLinkActive="active-menu" [routerLinkOption]="{exact:true}">
+          <div>
+            <span><i class="fa fa-home"></i></span>
+            <h4>Home</h4>
+          </div>
+        </li>
+        <li  [routerLink]="['/category']" routerLinkActive="active-menu">
+          <div>
+            <span><i class="fa fa-list"></i></span>
+            <h4>Category</h4>
+          </div>
+        </li>
+        <li  [routerLink]="['/sign-in']" routerLinkActive="active-menu">
+            <div>
+                <span><i class="fa fa-user"></i></span>
+                <h4>Profile</h4>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

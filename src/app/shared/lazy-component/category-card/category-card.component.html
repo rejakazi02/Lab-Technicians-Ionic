@@ -1,0 +1,9 @@
+<div class="category-card" [id]="data?._id" [routerLink]="[data?.routerLink]">
+  <div class="category-img">
+     <a [routerLink]="[data?.routerLink]"><img [src]="data?.image" alt=""></a>
+  </div>
+  <div class="category-body">
+        <a [routerLink]="[data?.routerLink]" >{{data?.title}}</a>
+        <span>{{data?.totalItem}} Items</span>
+  </div>
+</div>

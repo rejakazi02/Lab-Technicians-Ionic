@@ -1,0 +1,53 @@
+<div class="product" [id]="product?._id">
+  <div class="product-image" [routerLink]="[product?.routerLink]">
+    <img src="{{ product.image }}" alt="" />
+    <div class="icons">
+       <ul>
+         <li><a href="#"><i class="fa-solid fa-shuffle"></i></a></li>
+         <li><a href="#"><i class="fa fa-play"></i></a></li>
+         <li><a [routerLink]="[product?.routerLink]"><i class="fa fa-eye"></i></a></li>
+       </ul>
+    </div>
+    <!--tag-->
+     <div class="tag">
+        <span class="discount-tag">-10%</span>
+        <!-- <span>New</span> -->
+     </div>
+    <!---wish-->
+    <span class="wish"><i class="fa fa-heart"></i></span>
+  </div>
+  <div class="product-body">
+    <!-- <div class="rating-area">
+      <ul>
+         <li><i class="fa fa-star"></i></li>
+         <li><i class="fa fa-star"></i></li>
+         <li><i class="fa fa-star"></i></li>
+         <li><i class="fa fa-star"></i></li>
+         <li><i class="fa fa-star"></i></li>
+         <li><span>(3)</span></li>
+      </ul>
+    </div> -->
+    <div class="select-box">
+        <select>
+          <option value="">Select Value</option>
+           <option value="">250 <sub>g</sub> - <sub>৳</sub>60</option>
+           <option value="">270 <sub>g</sub> - <sub>৳</sub>90</option>
+           <option value="">500 <sub>g</sub> - <sub>৳</sub>80</option>
+        </select>
+    </div>
+    <a [routerLink]="[product?.routerLink]">{{ product.name }}</a>
+    <div class="product-price">
+      <span class="prevPrice">৳{{ product.prvPrice }}</span> <span class="currPrice">৳{{ product.currPrice }}/<small>{{ product.unit }}</small></span>
+    </div>
+    <button *ngIf="!cart" class="product-button" (click)="selectCart(product)"><i class="fa-solid fa-basket-shopping"></i> Add</button>
+    <div class="cart-action" *ngIf="cart">
+      <button class="left">
+        <span class="material-icons">remove</span>
+      </button>
+      <p>01 <span>in cart</span></p>
+      <button class="right">
+        <span class="material-icons">add</span>
+      </button>
+    </div> <!-- END CART CONTROL AREA -->
+  </div>
+  </div>

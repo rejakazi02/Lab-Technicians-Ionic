@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="Group_472" data-name="Group 472" transform="translate(0.439 -0.088)">
+    <g id="Ellipse_121" data-name="Ellipse 121" transform="translate(-0.439 0.088)" fill="#c92127" stroke="#c92127" stroke-width="1">
+      <circle cx="11" cy="11" r="11" stroke="none"/>
+      <circle cx="11" cy="11" r="10.5" fill="none"/>
+    </g>
+    <path id="Icon_metro-shuffle" data-name="Icon metro-shuffle" d="M9.559,10.352H8.635L7.18,8.9,8.635,7.441h.923V8.9L11.6,6.858,9.559,4.82V6.276H8.394a.582.582,0,0,0-.412.171L6.356,8.073,4.73,6.447a.582.582,0,0,0-.412-.171H2.571V7.441H4.077L5.532,8.9,4.077,10.352H2.571v1.165H4.318a.582.582,0,0,0,.412-.171L6.356,9.72l1.626,1.626a.582.582,0,0,0,.412.171H9.559v1.456L11.6,10.935,9.559,8.9Z" transform="translate(3.859 2.502)" fill="#fff"/>
+  </g>
+</svg>

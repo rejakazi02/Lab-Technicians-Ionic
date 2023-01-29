@@ -1,0 +1,67 @@
+<div class="overlay" (click)="slideMenuClose()" *ngIf="slideMenu"></div>
+<div class="slide-menu-area" [class]="slideMenu?'slide-menu-active':''">
+    <div class="slide-menu-main">
+        <div class="user-area">
+            <div class="user-menu">
+                <ul>
+                    <li><button class="active" (click)="slideMenuClose()">Groceries</button></li>
+                    <li><button>Red Pharma</button></li>
+                </ul>
+            </div>
+            <div class="user" routerLink="../profile" (click)="slideMenuClose()">
+                <div class="user-img">
+                    <img src="./assets/images/brand/svg/user.svg" alt="">
+                </div>
+                <div class="user-name">
+                    <a routerLink="../profile">Rakibul Islam</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a routerLink="../sign-in" (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/profile.svg" alt=""> Profile</span> <i
+                            class="fa fa-angle-right"></i> </a></li>
+                <li><a (click)="slideMenuClose()"><span> <img src="./assets/images/brand/svg/combo.svg" alt=""> Combo</span> <i
+                            class="fa fa-angle-right"></i> </a></li>
+                <li><a (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/gift.svg" alt=""> Special Package</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/coupon.svg" alt=""> Coupon</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a routerLink="../offer" (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/discount.svg" alt=""> Offers</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a (click)="slideMenuClose()" routerLink="../order-list"> <span><img src="./assets/images/brand/svg/discount.svg" alt=""> Order List</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a (click)="slideMenuClose()" routerLink="../wish-list"> <span><img src="./assets/images/brand/svg/discount.svg" alt=""> Wishlist </span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a (click)="slideMenuClose()" routerLink="../compare-list"> <span><img src="./assets/images/brand/svg/Group 472.svg" alt=""> Compare Your Items </span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a (click)="slideMenuClose()" routerLink="../order-list"> <span><img src="./assets/images/brand/svg/tracking.svg" alt=""> Track Order</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a routerLink="../about-us" (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/team.svg" alt=""> About Us</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a routerLink="../contact-us" (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/phone.svg" alt=""> Contact</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/question.svg" alt="">Help</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/support.svg" alt=""> Coustomer Support</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a (click)="slideMenuClose()"> <span><img src="./assets/images/brand/svg/chat.svg" alt=""> Live Chat</span> <i
+                            class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="slide-footer">
+              <ul>
+                  <li><a routerLink="../terms-and-condition" (click)="slideMenuClose()">Terms and Conditions</a></li>
+                  <li><a routerLink="../privacy-policy" (click)="slideMenuClose()">Privacy Policy</a></li>
+                  <li><a routerLink="../faq" (click)="slideMenuClose()">Frequently Asked Quetions</a></li>
+                  <li><a routerLink="../refund-policy" (click)="slideMenuClose()">Refund Policy</a></li>
+              </ul>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,589 @@
+<app-header></app-header>
+<ion-content>
+    <div class="home-menu-area">
+        <div class="container">
+            <div class="home-menu-main">
+                <ul>
+                    <li><button>Package</button></li>
+                    <li><button>Combo</button></li>
+                    <li><button routerLink="../offer">Offers</button></li>
+                    <li><button>Coupons</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!---banner-area-->
+    <div class="banner-area">
+        <div class="container">
+            <div class="banner-main carousel">
+                <swiper [slidesPerView]="1" [spaceBetween]="10" [autoplay]="true" [loop]="true" [pagination]="{
+                    clickable:true
+                }" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let product of [1,2,3]">
+                        <div class="banner">
+                            <div class="banner-img">
+                                <img src="./assets/images/temp/image/Package incoming.png" alt="">
+                            </div>
+                        </div>
+                    </ng-template>
+                </swiper>
+            </div>
+        </div>
+    </div>
+
+    <div class="section1">
+        <div class="container">
+            <div class="section1-top">
+                <div class="title">
+                    <div>
+                        <h3>Product Category</h3>
+                    </div>
+                    <div>
+                        <a routerLink="../category">View All <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section1-main">
+                <div class="category-card" routerLink="../sub-category">
+                    <div class="category-card-main">
+                        <div class="category-card-left">
+                            <h3>Grocery</h3>
+                        </div>
+                        <div class="category-card-right">
+                            <img src="./assets/images/temp/products/kisspng-rice-biryani-pilaf-grocery-store-basmati-rice-sacks-5a86f56b030de2.2499074915187940910125.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" style="background-color: #b6f4fb;" routerLink="../sub-category">
+                    <div class="category-card-main">
+                        <div class="category-card-left">
+                            <h3>Baby Care</h3>
+                        </div>
+                        <div class="category-card-right">
+                            <img src="./assets/images/temp/products/Diaper-M-Size-26.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" style="background-color: #f6efd1;" routerLink="../sub-category">
+                    <div class="category-card-main">
+                        <div class="category-card-left">
+                            <h3>Essentials</h3>
+                        </div>
+                        <div class="category-card-right">
+                            <img src="./assets/images/temp/products/ReiMAGGIne Masala Noodles 16 Pack 3D.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" style="background-color: #b4b4f1;" routerLink="../sub-category">
+                    <div class="category-card-main">
+                        <div class="category-card-left">
+                            <h3>Beauty Care</h3>
+                        </div>
+                        <div class="category-card-right">
+                            <img src="./assets/images/temp/products/Revive Mousturizing Lotion Pack_100 ml  2020.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" style="background-color: #b4e9cd;" routerLink="../sub-category">
+                    <div class="category-card-main">
+                        <div class="category-card-left">
+                            <h3>Health Care</h3>
+                        </div>
+                        <div class="category-card-right">
+                            <img src="./assets/images/temp/products/1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" style="background-color: #e6bac5;" routerLink="../sub-category">
+                    <div class="category-card-main">
+                        <div class="category-card-left">
+                            <h3>Beverage</h3>
+                        </div>
+                        <div class="category-card-right">
+                            <img src="./assets/images/temp/products/Mirzapore Best Leaf 400 gm.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Best Deal</h3>
+                </div>
+                <!--time-area-->
+                <div class="time-container-1">
+                    <div class="time-container">
+                        <div class="show-time">
+                            <span>{{ days }}</span>
+                            <small>Days</small>
+                        </div>
+                        <div class="show-time">
+                            <span>{{ hours }}</span>
+                            <small>Hours</small>
+                        </div>
+                        <div class="show-time">
+                            <span>{{ min }}</span>
+                            <small>Minutes</small>
+                        </div>
+                        <div class="show-time">
+                            <span>{{ sec }}</span>
+                            <small>Seconds</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Special Offer</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.specialOfferSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <div class="combo-card">
+                            <div class="combo-card-img">
+                                <img src="./assets/images/temp/banner/04.jpg" alt="">
+                            </div>
+                            <div class="combo-card-body">
+                                <div class="combo-card-body-left">
+                                    <h3>Deal Of the Month</h3>
+                                    <h5><b>৳ 11950 </b> <del>৳ 12770</del></h5>
+                                    <button> Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Combo Offers</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+    <!---buy-more-->
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Groceries</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Essentials</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+    <!---offer-banner-->
+    <div class="offer-banner">
+        <div class="container">
+            <div class="offer-banner-main">
+                <div class="banner-img">
+                    <img src="./assets/images/temp/image/Package incoming.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Our Featured Items</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Dairy</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Exclusive Items</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Meat</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Special Offer</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+    <!---offer-banner-->
+    <div class="offer-banner">
+        <div class="container">
+            <div class="offer-banner-main">
+                <div class="banner-img">
+                    <img src="./assets/images/temp/image/Package incoming.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Baby Care</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Noodles</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Health Care</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="section3-main product-carousel">
+                <ion-slides pager="true" [options]="carousel.productSlideOption">
+                    <ion-slide *ngFor="let product of products">
+                        <!---category-card  -->
+                        <app-product-card-one [product]="product"></app-product-card-one>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+    <!---offer-banner-->
+    <div class="offer-banner">
+        <div class="container">
+            <div class="offer-banner-main">
+                <div class="banner-img">
+                    <img src="./assets/images/temp/image/Package incoming.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---section - 7-->
+    <div class="section-7">
+        <div class="container">
+            <!---title-area-->
+            <div class="title">
+                <div>
+                    <h3>Choose Brand</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <!----section7-main-->
+            <div class="section7-main carousel">
+                <ion-slides pager="true" [options]="carousel.brandSlideOption">
+                    <ion-slide *ngFor="let data of brandData">
+                        <!---brand-card-->
+                        <div class="brand-card" [id]="data?._id">
+                            <div class="brand-image">
+                                <img [src]="data?.image" [alt]="data?.title">
+                                <div class="link">
+                                    <a [routerLink]="[data?.routerLink]"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+
+            </div>
+        </div>
+    </div>
+
+    <!---section13-->
+    <div class="section13">
+        <div class="container">
+            <div class="section13-main carousel">
+                <ion-slides pager="true" [options]="carousel.offersSlideOption ">
+                    <ion-slide *ngFor="let data of offers" [id]="data?._id">
+                        <div class="offer-card">
+                            <a [href]="data?.routerLink"><img [src]="data?.offerImage" alt=""></a>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+
+
+    <!---section-8-->
+    <div class="section-8">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Our Client Feadback</h3>
+                </div>
+            </div>
+            <div class="section8-main carousel">
+                <swiper [effect]="'coverflow'" [grabCursor]="true" [autoplay]="true" [loop]="true"
+                    [centeredSlides]="true" [zoom]="true" [grabCursor]="true" [slidesPerView]="1" [coverflowEffect]="{
+                    rotate: 80,
+                    stretch: 0,
+                    depth:60,
+                    modifier: 1,
+                  slideShadows: true
+                  }" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let data of [1,2,3,4,5]">
+
+                        <!--client-card-->
+                        <div class="client-card">
+                            <span><i class="fas fa-quote-left"></i></span>
+                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati
+                                magnam doloribus
+                                magni provident ipsam</p>
+                            <div class="client-user">
+                                <h2>mahmud hasan</h2>
+                                <ul>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <img src="./assets/images/temp/image/client1.jpg" alt="">
+                            </div>
+                        </div>
+                    </ng-template>
+                </swiper>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!---section9--->
+    <div class="section-9">
+        <div class="container">
+            <div class="title">
+                <div>
+                    <h3>Read Our Articles</h3>
+                </div>
+                <div>
+                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="section9-main carousel carousel-article">
+                <ion-slides pager="true" [options]="carousel.blogSlideOption ">
+                    <ion-slide *ngFor="let data of articles">
+                        <app-blog-card [data]="data"></app-blog-card>
+                    </ion-slide>
+                </ion-slides>
+
+            </div>
+        </div>
+    </div>
+
+
+    <app-refer-friend></app-refer-friend>
+    <app-connect-with></app-connect-with>
+</ion-content>
+
+<app-bottom-nav></app-bottom-nav>

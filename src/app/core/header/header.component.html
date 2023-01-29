@@ -1,0 +1,45 @@
+<div class="header">
+     <div class="container">
+        <div class="header-main">
+             <div class="header-top">
+                 <div class="header-top-left">
+                      <div class="menu-bars" (click)="slideMenuOpen()">
+                         <span class="line-1"></span>
+                         <span class="line-2"></span>
+                         <span class="line-3"></span>
+                      </div>
+                      <div class="user">
+                         <h3>O.R Nizam Road</h3>
+                         <h4>Chattogram</h4>
+                      </div>
+                 </div>
+                 <div class="header-top-right">
+                      <ul>
+                          <li><span routerLink="../cart"><i class="fa fa-shopping-bag"></i></span></li>
+                          <li><button>৳200</button></li>
+                      </ul>
+                 </div>
+             </div>
+             <div class="search-area">
+                <div class="search-main">
+                    <div class="search-btn">
+                        <button class="left" routerLink="../product-list"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="search-input">
+                        <input type="text" value="" [placeholder]="placeValue" #searchInput>
+                    </div>
+                    <div class="search-btn">
+                        <button><i class="fa-solid fa-microphone"></i></button>
+                    </div>
+                </div>
+             </div>
+
+        </div>
+     </div>
+</div>
+
+
+<!---slide-menu-area-->
+<div class="slide-menu-area">
+    <app-slide-menu #slideMenu></app-slide-menu>
+</div>

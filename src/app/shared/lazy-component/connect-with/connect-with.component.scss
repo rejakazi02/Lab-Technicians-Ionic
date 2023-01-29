@@ -1,0 +1,76 @@
+@import'src/stylesheets/variables';
+/*** section3 **/
+.section3{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 10px 20px 10px;
+    box-sizing: border-box;
+}
+.section3-title{
+    display: block;
+    margin-bottom: 15px;
+}
+.section3-title h3{
+    color: #787979;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    line-height: 20px;
+}
+.section3-main{
+    display: block;
+}
+.section3-main ul{
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.section3-main ul li{
+    width: 100%;
+}
+.section3-main ul li button{
+    background-color: #e61043;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: $font-en-primary;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.section3-main h3{
+    background-color: #e61043;
+    color: #fff;
+    gap: 8px;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: $font-en-primary;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}
+@media(max-width:500px){
+    .section3-main ul li span{
+        display: none;
+    }
+}

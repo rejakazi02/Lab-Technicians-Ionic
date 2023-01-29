@@ -1,0 +1,47 @@
+@import'src/stylesheets/variables';
+/*** section2 ***/
+.section2{
+    display: block;
+    margin-top: 20px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+.section2-main{
+    display: block;
+    background-color: #fff;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 10%);
+    border-radius: 6px;
+}
+.section2-left h3{
+    color: $color-black;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 15px!important;
+    line-height: 23px;
+}
+.section2-left button{
+    background-color: #e61043;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 12px;
+    max-width: 120px;
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+@media(max-width:500px){
+    .section2-main{
+        padding: 20px;
+    }
+}
